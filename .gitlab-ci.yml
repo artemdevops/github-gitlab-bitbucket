@@ -1,0 +1,13 @@
+---
+
+stages: 
+- deploy-with-var
+
+deploy:with:var:
+stage: deploy-with-var
+image: golang:alpine3.15
+variables: 
+DEV: "11.11.11.11:8080"
+PROD: "22.22.22.22:8081"
+script: 
+- echo Deploy to $DEV
